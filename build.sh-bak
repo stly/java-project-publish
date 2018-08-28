@@ -1,0 +1,38 @@
+repo="/Users/yang/.m2/repository"
+project_location="/Users/yang/Documents/workspace/kidpay"
+#source="/Users/yang/Documents/workspace/kidpay/src/main/java"
+jar_list="/Users/yang/build/jar.list"
+java_list="/Users/yang/build/java.list"
+tomcat_home="/Users/yang/Desktop/env/apache-tomcat-6.0.41"
+
+if [ -z $repo ];then
+    read -p '请输入maven库地址' repo
+fi
+if [ -z $project_location ];then
+    read -p "请输入项目地址" project_location
+    source="$project_location/src/main/java"
+fi
+fi [ -z $ ];then
+fi
+
+
+fi [ -z $ ];then
+fi
+
+
+find $repo -name '*.jar' > $jar_list
+find $source -name '*.java' > $java_list
+# get jar str a.jar:b.jar:
+for line in `cat $jar_list`
+do
+    jar_list_str=$jar_list_str$line:
+done
+
+
+javac  -cp $jar_list_str$tomcat_home/lib/servlet-api.jar: -sourcepath $source -d . @$java_list
+
+cp -rf $project_location/src/main/webapp .
+
+mv com webapp/WEB-INF/.
+
+

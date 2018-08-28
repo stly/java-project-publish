@@ -1,0 +1,5 @@
+repo=/Users/yang/.m2/repository
+project_location=/Users/yang/Documents/workspace/kidpay
+tomcat_home=/Users/yang/Desktop/env/apache-tomcat-6.0.41
+publish_location=/var/www/rongtongysf/unpay
+server=rongtong-test
