@@ -85,4 +85,4 @@ mv lib webapp/WEB-INF/
 
 scp -r webapp/* $server:$publish_location/
 
-ssh $server /var/shell/restart.sh
+ssh $server "export BASH_ENV=/etc/profile;/var/shell/restart.sh"
