@@ -1,4 +1,4 @@
 jar.list
 java.list
 webapp
-
+*.log
